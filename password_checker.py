@@ -16,7 +16,7 @@ def password_strength(password):
     if length_ok:
         print("✔ Длина не меньше 8 символов")
     else:
-        print("✘ Пароль слишком короткий")
+        print("✘ Пароль должен быть не меньше 8 символов")
 
     if digit_ok:
         print("✔ Есть цифра")
@@ -39,13 +39,16 @@ def main():
 
         password_strength(password)
 
-        again = input("\nПроверить другой пароль? (да/нет): ").lower()
+        while True:
+            again = input("\nПроверить другой пароль? (да/нет): ").lower()
 
-        if again == "нет":
-            print("Программа завершена.")
-            break
-        elif again != "да":
-            print("Пожалуйста, введите 'да' или 'нет'.")
+            if again == "да":
+                break
+            elif again == "нет":
+                print("Программа завершена.")
+                return
+            else:
+                print("Пожалуйста, введите 'да' или 'нет'.")
 
 
 if __name__ == "__main__":
