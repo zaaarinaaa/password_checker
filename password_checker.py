@@ -39,10 +39,13 @@ def main():
 
         password_strength(password)
 
-        again = input("\nПроверить другой пароль? (Да/Нет): ").lower()
-        if again != "Да":
+        again = input("\nПроверить другой пароль? (да/нет): ").lower()
+
+        if again == "нет":
             print("Программа завершена.")
             break
+        elif again != "да":
+            print("Пожалуйста, введите 'да' или 'нет'.")
 
 
 if __name__ == "__main__":
