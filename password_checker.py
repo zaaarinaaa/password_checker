@@ -39,8 +39,8 @@ def main():
 
         password_strength(password)
 
-        again = input("\nПроверить другой пароль? (y/n): ").lower()
-        if again != "y":
+        again = input("\nПроверить другой пароль? (Да/Нет): ").lower()
+        if again != "Да":
             print("Программа завершена.")
             break
 
